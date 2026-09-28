@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="bombilla">
+    <file>../images/bombilla.png</file>
+  </qresource>
+</RCC>

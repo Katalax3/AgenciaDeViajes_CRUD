@@ -1,7 +1,7 @@
 import sys
 from PySide6.QtWidgets import QApplication, QDialog
 
-from src.app.ui.Login_ui import Ui_Dialog
+from src.app.ui.PopGuardado_ui import Ui_Dialog
 
 class Login(QDialog):
     def __init__(self):

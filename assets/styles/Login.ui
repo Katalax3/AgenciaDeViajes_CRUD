@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>Login</class>
+ <widget class="QDialog" name="Login">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>580</height>
+    <height>579</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Login</string>
   </property>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
@@ -34,7 +34,7 @@
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="Ingresar">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -52,7 +52,7 @@
     <string>INGRESAR</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="EUsuarioCorreo">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -73,7 +73,7 @@
     <string>Usuario o Correo Electronico</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="BEmpleado">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -115,7 +115,7 @@
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="BCliente">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -136,7 +136,7 @@
     <string notr="true">buttonGroup</string>
    </attribute>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="EContrasena">
    <property name="geometry">
     <rect>
      <x>40</x>
