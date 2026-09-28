@@ -14,6 +14,7 @@ class VentanaLogin(QDialog):
         self.ui.BEmpleado.setCheckable(True)
         self.ui.buttonGroup.setExclusive(True)
         self.ui.BCliente.setChecked(True)
+        self.ui.EContrasena.setEchoMode(self.ui.EContrasena.EchoMode.Password)
 
         
         self.ui.Ingresar.clicked.connect(self.procesar_login)
