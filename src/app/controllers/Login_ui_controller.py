@@ -1,14 +1,15 @@
 import sys
 from PySide6.QtWidgets import QDialog, QMessageBox
-from src.app.ui import Ui_Login
+from app.ui import Ui_Login
 from .MenuOpciones_ui_controller import MenuOpciones
-from src.app.dal.auth_dal import autenticar_usuario
+from app.services import AuthService
 
 class VentanaLogin(QDialog):
     def __init__(self):
         super().__init__()
         self.ui = Ui_Login()
         self.ui.setupUi(self)
+        self.auth_service = AuthService()
 
         self.ui.BCliente.setCheckable(True)
         self.ui.BEmpleado.setCheckable(True)
@@ -38,9 +39,12 @@ class VentanaLogin(QDialog):
           QMessageBox.warning(self, "Campos Vacios", "Por favor ingrese su usuario/correo y contraseña")
           return
 
-     usuario = autenticar_usuario(identificador, rol, contrasena)
+     try:
+          usuario = self.auth_service.autenticar_usuario(identificador, rol, contrasena)
 
-     if usuario:
-          self.siguiente_ventana(rol)
-     else:
-          QMessageBox.critical(self, "Mensaje de error", "Credenciales incorrectas o el usuario no existe")
+          if usuario:
+               self.siguiente_ventana(rol)
+          else:
+               QMessageBox.critical(self, "Mensaje de error", "Credenciales incorrectas o el usuario no existe")
+     except Exception as e:
+                  QMessageBox.critical(None, "Mensaje de error", f"Error al conectar o consultar la BD: {e}")
