@@ -1,3 +1,5 @@
 from .Clientes_ui_controller import VentanaCliente
 from .Empleados_ui_controller import VentanaEmpleado
 from .Login_ui_controller import VentanaLogin
+from .MenuOpciones_ui_controller import MenuOpciones
+from .Paises_ui_controller import VentanaPais
