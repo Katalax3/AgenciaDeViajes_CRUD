@@ -1,7 +1,7 @@
 import sys
 from PySide6.QtWidgets import QDialog, QMessageBox
 from src.app.ui import Ui_Login
-from src.app.controllers import VentanaCliente, VentanaEmpleado
+from .MenuOpciones_ui_controller import MenuOpciones
 from src.app.dal.auth_dal import autenticar_usuario
 
 class VentanaLogin(QDialog):
@@ -24,15 +24,10 @@ class VentanaLogin(QDialog):
                  return "clientes"
             return "empleados"
 
-    def siguiente_ventana(self, rol: str, usuario: dict):
-        if rol == "clientes":
-              self.ventana_principal = VentanaCliente(datos_usuario=usuario)
-        else:
-             self.ventana_principal = VentanaEmpleado(datos_usuario=usuario)
-
-        self.ventana_principal.show()
-
-        self.close()
+    def siguiente_ventana(self, rol: str):
+              self.ventana_principal = MenuOpciones(rol=rol)
+              self.ventana_principal.show()
+              self.close()
                         
     def procesar_login(self):
      identificador = self.ui.EUsuarioCorreo.text().strip()
@@ -46,6 +41,6 @@ class VentanaLogin(QDialog):
      usuario = autenticar_usuario(identificador, rol, contrasena)
 
      if usuario:
-          self.siguiente_ventana(rol, usuario)
+          self.siguiente_ventana(rol)
      else:
           QMessageBox.critical(self, "Mensaje de error", "Credenciales incorrectas o el usuario no existe")

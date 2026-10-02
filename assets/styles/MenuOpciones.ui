@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MenuOpciones</class>
+ <widget class="QMainWindow" name="MenuOpciones">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Menú de Opciones</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menuBarMO">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="menuTablas">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="tearOffEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Tablas</string>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>false</bool>
+    </property>
+    <addaction name="actionPaises"/>
+    <addaction name="actionParcialidades"/>
+    <addaction name="actionBancos"/>
+   </widget>
+   <addaction name="menuTablas"/>
+  </widget>
+  <action name="actionPaises">
+   <property name="text">
+    <string>Paises</string>
+   </property>
+  </action>
+  <action name="actionParcialidades">
+   <property name="text">
+    <string>Parcialidades</string>
+   </property>
+  </action>
+  <action name="actionBancos">
+   <property name="text">
+    <string>Bancos</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
