@@ -15,6 +15,6 @@ class MenuOpciones(QMainWindow):
 
     def SeleccionarVentanaTabla(self, action):
         text = action.text()
-        if text == 'Paises':
+        if text == 'Parcialidades':
             self.siguiente_ventana = VentanaParcialidades(self.service)
             self.siguiente_ventana.show()
