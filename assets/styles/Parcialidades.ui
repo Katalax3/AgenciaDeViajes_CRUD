@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>VentanaPaises</class>
- <widget class="QWidget" name="VentanaPaises">
+ <class>VentanaParcialidades</class>
+ <widget class="QWidget" name="VentanaParcialidades">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -17,53 +17,53 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Paises</string>
+   <string>Parcialidades</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="1" column="0" colspan="2">
-    <widget class="QLineEdit" name="lineIDPais">
+    <widget class="QLineEdit" name="lineIDParcialidades">
      <property name="placeholderText">
-      <string>Inserte el ID del pais</string>
+      <string>Inserte el ID de la parcialidad</string>
      </property>
     </widget>
    </item>
    <item row="2" column="0" colspan="2">
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>Nombre</string>
+      <string>Tipo</string>
      </property>
     </widget>
    </item>
    <item row="7" column="0">
-    <widget class="QPushButton" name="ppaisBuscar">
+    <widget class="QPushButton" name="pparcialidadesBuscar">
      <property name="text">
       <string>Buscar</string>
      </property>
     </widget>
    </item>
    <item row="5" column="1" alignment="Qt::AlignmentFlag::AlignRight">
-    <widget class="QPushButton" name="ppaisNuevo">
+    <widget class="QPushButton" name="pparcialidadesNuevo">
      <property name="text">
       <string>Nuevo+</string>
      </property>
     </widget>
    </item>
    <item row="7" column="1">
-    <widget class="QPushButton" name="ppaisEliminar">
+    <widget class="QPushButton" name="pparcialidadesEliminar">
      <property name="text">
       <string>Eliminar</string>
      </property>
     </widget>
    </item>
    <item row="3" column="0" colspan="2">
-    <widget class="QLineEdit" name="lineNombrePais">
+    <widget class="QLineEdit" name="lineTipoParcialidades">
      <property name="placeholderText">
-      <string>Inserte el nombre del pais</string>
+      <string>Inserte el tipo de la parcialidad</string>
      </property>
     </widget>
    </item>
    <item row="5" column="0">
-    <widget class="QPushButton" name="ppaisActualizar">
+    <widget class="QPushButton" name="pparcialidadesActualizar">
      <property name="text">
       <string>Actualizar</string>
      </property>
@@ -72,12 +72,12 @@
    <item row="0" column="0" colspan="2">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>ID del pais</string>
+      <string>ID de la parcialidad</string>
      </property>
     </widget>
    </item>
    <item row="6" column="0" colspan="2">
-    <widget class="QTableView" name="vistaPaises"/>
+    <widget class="QTableView" name="vistaParcialidades"/>
    </item>
   </layout>
  </widget>

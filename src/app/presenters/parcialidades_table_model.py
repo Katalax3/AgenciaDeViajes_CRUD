@@ -1,21 +1,21 @@
 from typing import List
 from PySide6.QtCore import QAbstractTableModel, Qt, QModelIndex
-from app.models.Pais import Pais
+from app.models.Parcialidades import Parcialidades
 
 
-class PaisTableModel(QAbstractTableModel):
-    HEADERS = ["ID", "Nombre"]
+class ParcialidadesTableModel(QAbstractTableModel):
+    HEADERS = ["ID", "Tipo"]
 
     def __init__(self, parent=None):
         super().__init__(parent)
-        self._data: List[Pais] = []
+        self._data: List[Parcialidades] = []
 
-    def set_data(self, paises: List[Pais]):
+    def set_data(self, Parcialidadeses: List[Parcialidades]):
         self.beginResetModel()
-        self._data = list(paises)
+        self._data = list(Parcialidadeses)
         self.endResetModel()
 
-    def get_pais_at(self, row: int) -> Pais | None:
+    def get_Parcialidades_at(self, row: int) -> Parcialidades | None:
         if 0 <= row < len(self._data):
             return self._data[row]
         return None
@@ -29,12 +29,12 @@ class PaisTableModel(QAbstractTableModel):
     def data(self, index: QModelIndex, role=Qt.ItemDataRole.DisplayRole):
         if not index.isValid():
             return None
-        pais = self._data[index.row()]
+        Parcialidades = self._data[index.row()]
         if role == Qt.ItemDataRole.DisplayRole:
             if index.column() == 0:
-                return str(pais.idpais)
+                return str(Parcialidades.idparcia)
             if index.column() == 1:
-                return pais.nombre
+                return Parcialidades.tipoparcia
         if role == Qt.ItemDataRole.TextAlignmentRole and index.column() == 0:
             return int(Qt.AlignmentFlag.AlignCenter)
         return None
