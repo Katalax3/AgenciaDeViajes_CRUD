@@ -1,9 +1,8 @@
 from dataclasses import dataclass
-from PySide6.QtWidgets import QMessageBox
 
 @dataclass
 class Empleados:
-    id: int
+    idempleados: int
     nombre: str
     paterno: str
     materno: str
@@ -12,4 +11,4 @@ class Empleados:
 
     def __post_init__(self):
         if not len(self.contrasena) >= 8:
-            QMessageBox.critical(None, "Mensage de error", "Error: Ingrese una contraseña mayor a 8 caracteres")
+            raise ValueError("Error: Ingrese una contraseña mayor a 8 caracteres")

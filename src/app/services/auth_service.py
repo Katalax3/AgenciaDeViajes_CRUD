@@ -16,11 +16,4 @@ class AuthService:
                         return usuario
                     
         except Exception as e:
-             QMessageBox.critical(None, "Mensaje de error", f"Error al conectar o consultar la BD: {e}")
-
-
-
-
-              
-
-              
+             QMessageBox.critical(None, "Mensaje de error", f"Error al conectar o consultar la BD: {e}")          
