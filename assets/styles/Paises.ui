@@ -20,68 +20,64 @@
    <string>Paises</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="7" column="0">
-    <widget class="QPushButton" name="pushButton">
-     <property name="text">
-      <string>Buscar</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="0" colspan="3">
-    <widget class="QTableWidget" name="VistaPaises">
-     <property name="supportedDragActions">
-      <set>Qt::DropAction::IgnoreAction</set>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="2" alignment="Qt::AlignmentFlag::AlignRight">
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="text">
-      <string>Nuevo+</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0" colspan="3">
+   <item row="1" column="0" colspan="2">
     <widget class="QLineEdit" name="lineIDPais">
      <property name="placeholderText">
       <string>Inserte el ID del pais</string>
      </property>
     </widget>
    </item>
-   <item row="0" column="0" colspan="3">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>ID del pais</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="0" colspan="3">
-    <widget class="QLineEdit" name="lineNombrePais">
-     <property name="placeholderText">
-      <string>Inserte el nombre del pais</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="0" colspan="3">
+   <item row="2" column="0" colspan="2">
     <widget class="QLabel" name="label_2">
      <property name="text">
       <string>Nombre</string>
      </property>
     </widget>
    </item>
-   <item row="7" column="2">
-    <widget class="QPushButton" name="pushButton_3">
+   <item row="7" column="0">
+    <widget class="QPushButton" name="ppaisBuscar">
+     <property name="text">
+      <string>Buscar</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1" alignment="Qt::AlignmentFlag::AlignRight">
+    <widget class="QPushButton" name="ppaisNuevo">
+     <property name="text">
+      <string>Nuevo+</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QPushButton" name="ppaisEliminar">
      <property name="text">
       <string>Eliminar</string>
      </property>
     </widget>
    </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QLineEdit" name="lineNombrePais">
+     <property name="placeholderText">
+      <string>Inserte el nombre del pais</string>
+     </property>
+    </widget>
+   </item>
    <item row="5" column="0">
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="ppaisActualizar">
      <property name="text">
       <string>Actualizar</string>
      </property>
     </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>ID del pais</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QTableView" name="vistaPaises"/>
    </item>
   </layout>
  </widget>
