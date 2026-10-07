@@ -1,8 +1,10 @@
 from PySide6.QtWidgets import QMainWindow
 from PySide6.QtGui import QAction
 from src.app.ui import Ui_MenuOpciones
-from .Parcialidades_ui_controller import VentanaParcialidades
-from app.services.parcialidades_service import ParcialidadesService
+from .Parcialidades_ui_controller import VentanaParcialidades 
+from .Paises_ui_controller import VentanaPaises
+from .Bancos_ui_controller import VentanaBancos
+from app.services import ParcialidadesService
 
 class MenuOpciones(QMainWindow):
     def __init__(self, rol: str):
@@ -17,4 +19,10 @@ class MenuOpciones(QMainWindow):
         text = action.text()
         if text == 'Parcialidades':
             self.siguiente_ventana = VentanaParcialidades(self.service)
+            self.siguiente_ventana.show()
+        if text == 'Paises':
+            self.siguiente_ventana = VentanaPaises()
+            self.siguiente_ventana.show()
+        if text == 'Bancos':
+            self.siguiente_ventana = VentanaBancos()
             self.siguiente_ventana.show()
