@@ -3,3 +3,4 @@ from .Empleados_ui_controller import VentanaEmpleado
 from .Login_ui_controller import VentanaLogin
 from .MenuOpciones_ui_controller import MenuOpciones
 from .Parcialidades_ui_controller import VentanaParcialidades
+from .Paises_ui_controller import VentanaPaises
